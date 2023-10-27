@@ -16,21 +16,6 @@ export default function Register() {
         image="/static/images/cards/contemplative-reptile.jpg"
         title="green iguana"
       />
-<<<<<<< HEAD
-      <CardContent>
-      <Box
-      component="form"
-      sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-      <TextField id="filled-basic" label="Filled" variant="filled" />
-      <TextField id="standard-basic" label="Standard" variant="standard" />
-    </Box>
-=======
       <CardContent style={estilos.total}>
         <Typography gutterBottom variant="h5" component="div">
           Lizard
@@ -39,7 +24,6 @@ export default function Register() {
           Lizards are a widespread group of squamate reptiles, with over 6,000
           species, ranging across all continents except Antarctica
         </Typography>
->>>>>>> ae9cf709b777941ea7ce8046667c830a8410d7d2
       </CardContent>
       <CardActions>
         <Button size="small">Share</Button>
