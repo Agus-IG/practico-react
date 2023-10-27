@@ -8,13 +8,13 @@ import Typography from '@mui/material/Typography';
 
 export default function Register() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 1000 }} style={estilos.total}>
       <CardMedia
         sx={{ height: 140 }}
         image="/static/images/cards/contemplative-reptile.jpg"
         title="green iguana"
       />
-      <CardContent style={estilos.total}>
+      <CardContent >
         <Typography gutterBottom variant="h5" component="div">
           Lizard
         </Typography>
@@ -34,12 +34,9 @@ export default function Register() {
 const estilos = {
     total: {
       margin: "10px",
-      padding: "15px",
-      fontFamily: "-apple-system",
-      fontSize: "17px",
-  
       color: "black",
       backgroundColor: "#888BE3",
-      height: "600px",
+      height:"600px",
+      width:"500px"
     },
 }   
