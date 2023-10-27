@@ -10,6 +10,8 @@ import TextField from '@mui/material/TextField';
 
 export default function Register() {
   return (
+    <div style={estilos.todo}>
+
     <Card sx={{ maxWidth: 1000 }} style={estilos.total}>
       <CardMedia
         sx={{ height: 140 }}
@@ -17,7 +19,7 @@ export default function Register() {
         title="green iguana"
       />
       <CardContent >
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" style={estilos.titulos}>
           Crea tu cuenta
         </Typography>
         <Box
@@ -29,7 +31,9 @@ export default function Register() {
       autoComplete="off"
     >
       <TextField id="outlined-basic" label="Nombre" variant="outlined" />
+      <br/>
       <TextField id="filled-basic" label="E-mail" variant="filled" />
+      <br/>
       <TextField id="standard-basic" label="Contraseña" variant="standard" />
     </Box>
       </CardContent>
@@ -38,10 +42,15 @@ export default function Register() {
         <Button size="small">Crear</Button>
       </CardActions>
     </Card>
+    </div>
   );
 }
 
 const estilos = {
+  todo:{
+    backgroundColor:"black",
+    width:"100%",
+  },
     total: {
       margin: "10px",
       color: "black",
@@ -49,4 +58,8 @@ const estilos = {
       height:"600px",
       width:"500px"
     },
+    titulos:{
+      color:"black",
+      fontSize:"30px"
+    }
 }   
