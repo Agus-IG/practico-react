@@ -14,7 +14,7 @@ export default function Register() {
         image="/static/images/cards/contemplative-reptile.jpg"
         title="green iguana"
       />
-      <CardContent>
+      <CardContent style={estilos.total}>
         <Typography gutterBottom variant="h5" component="div">
           Lizard
         </Typography>
@@ -30,3 +30,16 @@ export default function Register() {
     </Card>
   );
 }
+
+const estilos = {
+    total: {
+      margin: "10px",
+      padding: "15px",
+      fontFamily: "-apple-system",
+      fontSize: "17px",
+  
+      color: "black",
+      backgroundColor: "#888BE3",
+      height: "600px",
+    },
+}   
