@@ -18,16 +18,24 @@ export default function Register() {
       />
       <CardContent >
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          Crea tu cuenta
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
+        <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField id="outlined-basic" label="Nombre" variant="outlined" />
+      <TextField id="filled-basic" label="E-mail" variant="filled" />
+      <TextField id="standard-basic" label="Contraseña" variant="standard" />
+    </Box>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Cancelar</Button>
+        <Button size="small">Crear</Button>
       </CardActions>
     </Card>
   );
