@@ -1,9 +1,3 @@
-import React from 'react'
+export function PerfilUser(){
 
-const PerfilUser = () => {
-    return (
-        <div>PerfilUser</div>
-    )
-}
-
-export default PerfilUser
+};
