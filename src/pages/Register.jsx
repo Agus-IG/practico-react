@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-export default function Register() {
+export default function Register() {  
   return (
     <Card sx={{ maxWidth: 1000 }} style={estilos.total}>
       <CardMedia
@@ -31,11 +31,18 @@ export default function Register() {
       <TextField id="outlined-basic" label="Nombre" variant="outlined" />
       <TextField id="filled-basic" label="E-mail" variant="filled" />
       <TextField id="standard-basic" label="Contraseña" variant="standard" />
+      
     </Box>
       </CardContent>
       <CardActions>
-        <Button size="small">Cancelar</Button>
-        <Button size="small">Crear</Button>
+        <div style = {estilos.cont}>
+        <Button variant="outlined" color="error" style = {estilos.boton}>
+  Cancelar
+</Button>
+        <Button variant="contained" color="success" style = {estilos.boton}>
+  Crear
+</Button>
+        </div>
       </CardActions>
 
     </Card>
@@ -50,4 +57,17 @@ const estilos = {
       height:"600px",
       width:"500px"
     },
+    boton: {
+      margin: "5px"
+    },
+    cont: {
+      margin: "10%",
+      alignItems: "center",
+      display: "flex",
+      marginLeft: "27%",
+      marginTop: "20%"
+      
+
+
+    }
 }   
