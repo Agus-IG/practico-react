@@ -10,14 +10,14 @@ import TextField from '@mui/material/TextField';
 
 export default function Register() {  
   return (
+    <div style={estilos.todo}>
+
     <Card sx={{ maxWidth: 1000 }} style={estilos.total}>
       <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
+        sx={{ height: 80 }} 
       />
       <CardContent >
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" style={estilos.titulos}>
           Crea tu cuenta
         </Typography>
         <Box
@@ -28,46 +28,56 @@ export default function Register() {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Nombre" variant="outlined" />
+      <TextField id="outlined-basic" label="Nombre" variant="filled" />
+      <br/>
       <TextField id="filled-basic" label="E-mail" variant="filled" />
-      <TextField id="standard-basic" label="Contraseña" variant="standard" />
+      <br/>
+      <TextField id="standard-basic" label="Contraseña" variant="filled" />
+      <br/>
+      <TextField id="standard-basic" label="Confirmar Contraseña" variant="filled" />
       
     </Box>
       </CardContent>
       <CardActions>
         <div style = {estilos.cont}>
-        <Button variant="outlined" color="error" style = {estilos.boton}>
-  Cancelar
-</Button>
-        <Button variant="contained" color="success" style = {estilos.boton}>
-  Crear
-</Button>
+        <Button variant="secondary" style={estilos.boton2}>cancelar</Button>
+        <Button variant="contained" style={estilos.boton} >crear</Button>
         </div>
       </CardActions>
-
     </Card>
+    </div>
   );
 }
 
 const estilos = {
+  todo:{
+    backgroundColor:"black",
+    width:"100%",
+  },
     total: {
       margin: "10px",
       color: "black",
-      backgroundColor: "#888BE3",
+      backgroundColor: "#f8f8d6",
       height:"600px",
       width:"500px"
     },
-    boton: {
-      margin: "5px"
+    titulos:{
+      color:"#5d7e62",
+      fontSize:"35px",
+      fontWight:"5px"
     },
-    cont: {
-      margin: "10%",
+    boton:{
+      backgroundColor: "#d4e2b6",
+      color:"#5d7e62",
+      margin: "2%"
+
+    },
+    boton2:{
+      outlineColor: "#d4e2b6",
+      color:"#5d7e62",
+    },
+    cont:{
+      width: "100%",
       alignItems: "center",
-      display: "flex",
-      marginLeft: "27%",
-      marginTop: "20%"
-      
-
-
     }
 }   
