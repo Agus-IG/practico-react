@@ -14,7 +14,7 @@ export default function Register() {
 
     <Card sx={{ maxWidth: 1000 }} style={estilos.total}>
       <CardMedia
-        sx={{ height: 80 }} 
+        sx={{ height: 60 }} 
       />
       <CardContent >
         <Typography gutterBottom variant="h5" component="div" style={estilos.titulos}>
@@ -23,7 +23,7 @@ export default function Register() {
         <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
+        '& > :not(style)': { m: 1, width: '30ch' },
       }}
       noValidate
       autoComplete="off"
@@ -51,8 +51,10 @@ export default function Register() {
 
 const estilos = {
   todo:{
-    backgroundColor:"black",
+    backgroundColor:"#b3c67f",
     width:"100%",
+    height: "100%",
+    padding: "1px"
   },
     total: {
       margin: "10px",
@@ -63,8 +65,8 @@ const estilos = {
     },
     titulos:{
       color:"#5d7e62",
-      fontSize:"35px",
-      fontWight:"5px"
+      fontSize:"40px",
+      fontWight:"10px"
     },
     boton:{
       backgroundColor: "#d4e2b6",
