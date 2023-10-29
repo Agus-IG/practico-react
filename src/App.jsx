@@ -23,18 +23,12 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-      <>
-        <div>
-          <a href="/home"> Inicio </a>
-          <br></br>
-          <a href="/login">Login</a>
-          <br></br>
-          <a href="/perfiluser">Perfil del usuario</a>
-          <br></br>
-          <a href="/register">Registro</a>
-        </div>
-
-      </>
+<>
+<a href="/home">Inicio |</a>
+<a href="/login"> Login |</a>
+<a href="/perfiluser"> Perfil del usuario |</a>
+<a href="/register"> Registro</a> 
+</>
 
     </>
 
