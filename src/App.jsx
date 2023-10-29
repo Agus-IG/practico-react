@@ -24,10 +24,10 @@ function App() {
 </BrowserRouter>
 
 <>
-<a href="/home">Inicio</a>
-<a href="/login">login</a>
-<a href="/perfiluser">perfil del usuario</a>
-<a href="/register">registro</a> 
+<a href="/home">Inicio |</a>
+<a href="/login"> Login |</a>
+<a href="/perfiluser"> Perfil del usuario |</a>
+<a href="/register"> Registro</a> 
 </>
 
     </>
