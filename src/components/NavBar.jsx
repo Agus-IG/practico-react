@@ -1,10 +1,8 @@
-import { BrowserRouter as BrowserRouter, Routes, Route} from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import { Home } from '../pages/Home';
 import Login from '../pages/Login';
