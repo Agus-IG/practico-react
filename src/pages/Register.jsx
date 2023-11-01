@@ -34,7 +34,7 @@ export default function Register() {
       <br/>
       <TextField id="filled-basic" label="E-mail" variant="filled" />
       <br/>
-      <TextField id="standard-basic" label="Contraseña" variant="standard" />
+      <TextField id="standard-basic" label="Contraseña" variant="standard" type="password" />
     </Box>
       </CardContent>
       <CardActions>

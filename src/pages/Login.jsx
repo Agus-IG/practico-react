@@ -22,7 +22,7 @@ export default function Login() {
       <CardActionArea>
         <CardMedia
            component="img"
-           height="150"
+           height="300"
            image={ImageFiles.image1} // Use the imported image variable here
            alt=""
         /> 
@@ -35,7 +35,10 @@ export default function Login() {
               label="Required"
               defaultValue="Ingrese email"
             />
-            
+           <br>
+           </br>
+           <br>
+           </br>
             <TextField
               required 
               id="outlined-password-input"
@@ -48,8 +51,8 @@ export default function Login() {
           
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="large" color="secondary">
+      <CardActions style={{ display: 'flex', justifyContent: 'center' }}>
+        <Button variant="contained" size="large" color="secondary">
         
           Login
       
@@ -69,7 +72,7 @@ const estilos = {
     total: {
       margin: "10px",
       color: "black",
-      backgroundColor: "#66F118",
+      backgroundColor: "#888BE3",
       height:"600px",
       width:"500px"
     },
