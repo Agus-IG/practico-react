@@ -32,8 +32,8 @@ export default function Login() {
             <TextField
               required
               id="outlined-required"
-              label="Required"
-              defaultValue="Ingrese email"
+              label="Email (Requerido)"
+              placeholder="Ingrese Email"
             />
            <br>
            </br>
@@ -42,9 +42,10 @@ export default function Login() {
             <TextField
               required 
               id="outlined-password-input"
-              label="Password"
-              type="password"
+              label="Contraseña (Requerida)"
+
               autoComplete="current-password"
+              placeholder='Ingrese Contraseña'
             />
             
           </div>
