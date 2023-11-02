@@ -25,13 +25,14 @@ export default function FormDialog(props) {
             </Button>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>{props.title}</DialogTitle>
-                <DialogContent>
-                    <TextField
+                <DialogContent className='flex-direction: column'>
+                    <TextField 
                         id="standard-basic"
                         label="Usuario"
                         defaultValue="Agustin Gonzalez"
                         variant="filled"
                     />
+                    <br></br>
                     <TextField
                         id="standard-password-input"
                         label="Password"
