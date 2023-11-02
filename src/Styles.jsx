@@ -33,6 +33,15 @@ export const estilos = {
       cont:{
         width: "100%",
         alignItems: "center",
+      },
+      profile: {
+        display:"flex",
+        flexDirection: "column",
+        alignItems: "center"
+      },
+      avatar: {
+        width:"150px",
+        height:"150px"
       }
   }   
   
