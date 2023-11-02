@@ -1,6 +1,16 @@
 export const estilos = {
     navBar:{
         backgroundColor:"#b3c67f",
+        width: "100%"
+      },
+      homeContainer:{
+      flexDirection: 'row',
+      },
+      home:{
+        backgroundColor:"#b3c67f",
+        width:"25%",
+        padding: "2%",
+        margin: "2%"
       },
     todo:{
       backgroundColor:"#b3c67f",
