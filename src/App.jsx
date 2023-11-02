@@ -4,8 +4,8 @@ import NavBar from './components/navBar';
 export const App = () => {
   return (
     <>
-    <NavBar></NavBar>
+    <NavBar/>
     </>
   )};
- 
+
 export default App
