@@ -11,7 +11,7 @@ import TextField from '@mui/material/TextField';
 export default function Register() {  
   return (
     <div style={estilos.todo}>
-
+      <div style={estilos.card}>
     <Card sx={{ maxWidth: 1000 }} style={estilos.total}>
       <CardMedia
         sx={{ height: 60 }} 
@@ -23,7 +23,7 @@ export default function Register() {
         <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1, width: '30ch' },
+        '& > :not(style)': { m: 1, width: '30ch'},
       }}
       noValidate
       autoComplete="off"
@@ -46,6 +46,7 @@ export default function Register() {
       </CardActions>
     </Card>
     </div>
+    </div>
   );
 }
   
@@ -56,7 +57,15 @@ const estilos = {
     backgroundColor:"#b3c67f",
     width:"100%",
     height: "100%",
-    padding: "1px"
+    padding: "1px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+    
+  },
+  card:{
+    display: "flex",
+    textAlign: "center"
   },
     total: {
       margin: "10px",
@@ -64,6 +73,7 @@ const estilos = {
       backgroundColor: "#f8f8d6",
       height:"600px",
       width:"500px"
+
     },
     titulos:{
       color:"#5d7e62",
