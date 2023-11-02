@@ -49,6 +49,8 @@ export default function Register() {
     </div>
   );
 }
+  
+
 
 const estilos = {
   todo: {
