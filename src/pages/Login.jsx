@@ -10,7 +10,7 @@ import ImageFiles from '../indeximg.jsx';
 
 export default function Login() {
   return (
-      
+      <div style = {estilos.todo}>
     <Card sx={{ maxWidth: 1000 }} style={estilos.total}>
       <Box
           component="form"
@@ -32,7 +32,7 @@ export default function Login() {
         <Typography gutterBottom variant="h5" component="div" style={estilos.titulos}>
           Iniciar Sesion
         </Typography>
-        <div>
+        
             <TextField
               required
               id="outlined-required"
@@ -52,18 +52,19 @@ export default function Login() {
               placeholder='Ingrese Contraseña'
             />
             
-          </div>
+         
           
         </CardContent>
       </CardActionArea>
       <CardActions style={{ display: 'flex', justifyContent: 'center' }}>
-        <Button variant="contained" size="large" color="secondary">
+        <Button variant="contained" size="large"style={estilos.boton}>
         
           Login
       
         </Button>
       </CardActions>
     </Card>
+    </div>
     
 
       );
@@ -74,7 +75,7 @@ export default function Login() {
 
 
 const estilos = {
-  todo:{
+  todo: {
     backgroundColor:"#b3c67f",
     width:"100%",
     height: "100%",

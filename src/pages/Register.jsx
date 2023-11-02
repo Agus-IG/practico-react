@@ -33,9 +33,9 @@ export default function Register() {
       <br/>
       <TextField id="filled-basic" label="E-mail" variant="filled" />
       <br/>
-      <TextField id="standard-basic" label="Contraseña" variant="filled" />
+      <TextField id="standard-basic" type='password' label="Contraseña" variant="filled" />
       <br/>
-      <TextField id="standard-basic" label="Confirmar Contraseña" variant="filled" />
+      <TextField id="standard-basic" type='password' label="Confirmar Contraseña" variant="filled" />
       
     </Box>
       </CardContent>
@@ -51,7 +51,7 @@ export default function Register() {
 }
 
 const estilos = {
-  todo:{
+  todo: {
     backgroundColor:"#b3c67f",
     width:"100%",
     height: "100%",
