@@ -7,16 +7,15 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+//import { estilos } from '../Styles';
 
-export default function Register() {
+export default function Register() {  
   return (
     <div style={estilos.todo}>
 
     <Card sx={{ maxWidth: 1000 }} style={estilos.total}>
       <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
+        sx={{ height: 60 }} 
       />
       <CardContent >
         <Typography gutterBottom variant="h5" component="div" style={estilos.titulos}>
@@ -25,21 +24,26 @@ export default function Register() {
         <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
+        '& > :not(style)': { m: 1, width: '30ch' },
       }}
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Nombre" variant="outlined" />
+      <TextField id="outlined-basic" label="Nombre" variant="filled" />
       <br/>
       <TextField id="filled-basic" label="E-mail" variant="filled" />
       <br/>
-      <TextField id="standard-basic" label="Contraseña" variant="standard" type="password" />
+      <TextField id="standard-basic" label="Contraseña" variant="filled" />
+      <br/>
+      <TextField id="standard-basic" label="Confirmar Contraseña" variant="filled" />
+      
     </Box>
       </CardContent>
       <CardActions>
-        <Button size="small">Cancelar</Button>
-        <Button size="small">Crear</Button>
+        <div style = {estilos.cont}>
+        <Button variant="secondary" style={estilos.boton2}>cancelar</Button>
+        <Button variant="contained" style={estilos.boton} >crear</Button>
+        </div>
       </CardActions>
     </Card>
     </div>
@@ -48,18 +52,35 @@ export default function Register() {
 
 const estilos = {
   todo:{
-    backgroundColor:"black",
+    backgroundColor:"#b3c67f",
     width:"100%",
+    height: "100%",
+    padding: "1px"
   },
     total: {
       margin: "10px",
       color: "black",
-      backgroundColor: "#888BE3",
+      backgroundColor: "#f8f8d6",
       height:"600px",
       width:"500px"
     },
     titulos:{
-      color:"black",
-      fontSize:"30px"
+      color:"#5d7e62",
+      fontSize:"40px",
+      fontWight:"10px"
+    },
+    boton:{
+      backgroundColor: "#d4e2b6",
+      color:"#5d7e62",
+      margin: "2%"
+
+    },
+    boton2:{
+      outlineColor: "#d4e2b6",
+      color:"#5d7e62",
+    },
+    cont:{
+      width: "100%",
+      alignItems: "center",
     }
 }   
