@@ -6,6 +6,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { estilos } from '../Styles';
 
 export default function FormDialog(props) {
     const [open, setOpen] = React.useState(false);
@@ -20,18 +21,19 @@ export default function FormDialog(props) {
 
     return (
         <React.Fragment>
-            <Button variant="contained" onClick={handleClickOpen}>
+            <Button style={estilos.boton} variant="contained" onClick={handleClickOpen}>
                 {props.title}
             </Button>
             <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>{props.title}</DialogTitle>
-                <DialogContent>
-                    <TextField
+                <DialogTitle style={estilos.dialogo}>{props.title}</DialogTitle>
+                <DialogContent style={estilos.dialogo}>
+                    <TextField 
                         id="standard-basic"
                         label="Usuario"
                         defaultValue="Agustin Gonzalez"
                         variant="filled"
                     />
+                    <br></br>
                     <TextField
                         id="standard-password-input"
                         label="Password"
@@ -41,9 +43,9 @@ export default function FormDialog(props) {
                         variant="filled"
                     />
                 </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose}>Cancelar</Button>
-                    <Button onClick={handleClose}>Aceptar</Button>
+                <DialogActions style={estilos.dialogo}>
+                    <Button style={estilos.dialogo} onClick={handleClose}>Cancelar</Button>
+                    <Button style={estilos.dialogo} onClick={handleClose}>Aceptar</Button>
                 </DialogActions>
             </Dialog>
         </React.Fragment>
