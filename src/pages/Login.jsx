@@ -10,7 +10,8 @@ import ImageFiles from '../indeximg.jsx';
 
 export default function Login() {
   return (
-    <Card sx={{ maxWidth: 300 }} style={estilos.total}>
+      
+    <Card sx={{ maxWidth: 1000 }} style={estilos.total}>
       <Box
           component="form"
           sx={{
@@ -22,12 +23,15 @@ export default function Login() {
       <CardActionArea>
         <CardMedia
            component="img"
-           height="300"
+           sx={{ maxHeight: 200, maxWidth: 200, margin: '0 auto' }}
            image={ImageFiles.image1} // Use the imported image variable here
            alt=""
         /> 
         <br></br>
         <CardContent>
+        <Typography gutterBottom variant="h5" component="div" style={estilos.titulos}>
+          Iniciar Sesion
+        </Typography>
         <div>
             <TextField
               required
@@ -42,8 +46,8 @@ export default function Login() {
             <TextField
               required 
               id="outlined-password-input"
-              label="Contraseña (Requerida)"
-
+              label="Contraseña(Requerida)"
+              type='password'
               autoComplete="current-password"
               placeholder='Ingrese Contraseña'
             />
@@ -70,11 +74,36 @@ export default function Login() {
 
 
 const estilos = {
+  todo:{
+    backgroundColor:"#b3c67f",
+    width:"100%",
+    height: "100%",
+    padding: "1px"
+  },
     total: {
       margin: "10px",
       color: "black",
-      backgroundColor: "#888BE3",
+      backgroundColor: "#f8f8d6",
       height:"600px",
       width:"500px"
     },
+    titulos:{
+      color:"#5d7e62",
+      fontSize:"40px",
+      fontWight:"10px"
+    },
+    boton:{
+      backgroundColor: "#d4e2b6",
+      color:"#5d7e62",
+      margin: "2%"
+
+    },
+    boton2:{
+      outlineColor: "#d4e2b6",
+      color:"#5d7e62",
+    },
+    cont:{
+      width: "100%",
+      alignItems: "center",
+    }
 }   
