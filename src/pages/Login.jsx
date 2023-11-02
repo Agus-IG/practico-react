@@ -56,7 +56,7 @@ export default function Login() {
           
         </CardContent>
       </CardActionArea>
-      <CardActions style={{ display: 'flex', justifyContent: 'center' }}>
+      <CardActions style={{ display: 'flex', justifyContent: 'left' }}>
         <Button variant="contained" size="large"style={estilos.boton}>
         
           Login
