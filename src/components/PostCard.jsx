@@ -10,6 +10,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ImageFiles from '../indeximg.jsx';
 import { estilos } from '../Styles.jsx';
 
+
 function PostCard() {
     return (
     <Card style={estilos.home}>
@@ -29,12 +30,12 @@ function PostCard() {
         />
         <CardMedia
         component="img"
-        sx={{ maxHeight: 100, maxWidth: 100, margin: '0 auto' }}
-        image= {ImageFiles.image2}
+        sx={{ maxHeight: 200, maxWidth: 150, margin: '0 auto' }}
+        image= {ImageFiles.postMariano}
         alt="Home"
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" textAlign={"justify"}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 2 de carne, 4 de choclo, 1 de carne, 2 de choclo, 9 de carne, 5 de choclo, 5 de choclo... y otra más de choclo
         </Typography>
       </CardContent>

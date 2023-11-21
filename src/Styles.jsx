@@ -4,13 +4,14 @@ export const estilos = {
         width: "100%"
       },
       homeContainer:{
-      flexDirection: 'row',
+      display : "flex",
       },
       home:{
         backgroundColor:"#b3c67f",
         width:"25%",
+        height:"350px",
         padding: "2%",
-        margin: "2%"
+        margin: "3%"
       },
     todo:{
       backgroundColor:"#b3c67f",
