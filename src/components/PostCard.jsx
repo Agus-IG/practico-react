@@ -16,8 +16,8 @@ function PostCard() {
     <Card style={estilos.home}>
         <CardHeader
         avatar={
-            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+            <Avatar sx={{ bgcolor: green[500] }} aria-label="recipe">
+            L
             </Avatar>
         }
         action={
@@ -44,3 +44,5 @@ function PostCard() {
 }
 
 export default PostCard;
+
+
