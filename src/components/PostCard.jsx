@@ -16,7 +16,7 @@ function PostCard() {
     <Card style={estilos.home}>
         <CardHeader
         avatar={
-            <Avatar sx={{ bgcolor: green[500] }} aria-label="recipe">
+            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
             L
             </Avatar>
         }
