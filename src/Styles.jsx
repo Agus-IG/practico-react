@@ -6,7 +6,15 @@ export const estilos = {
     backgroundColor: "#b3c67f",
     width: "100%",
     height: "100%",
-    padding: "1px"
+    padding: "1px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+    
+  },
+  card:{
+    display: "flex",
+    textAlign: "center"
   },
   total: {
     margin: "10px",
@@ -38,13 +46,12 @@ export const estilos = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    backgroundColor: "#b3c67f",
-    height: "800px",
-    padding: "1px"
+    height: "800px"
   },
   avatar: {
     width: "150px",
-    height: "150px"
+    height: "150px",
+    margin: "30px",
   },
   dialogo: {
     backgroundColor: "#d4e2b6",

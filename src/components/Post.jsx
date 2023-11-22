@@ -11,8 +11,21 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ImageFiles from '../indeximg.jsx';
+import { useState } from 'react';
+
+
+
 
 function PostCard() {
+  const [APIData, setAPIData] = useState([]);
+  const getPosts = () => {
+    axios.get(`http://localhost:3000/api/tasks`)
+        .then((response) => {
+            setAPIData(response.data.tasks);
+            console.log(response.data.tasks)
+        })
+  }
+  
     return (
     <Card sx={{ maxWidth: 1000, maxHeight: 1000, }}>
         <CardHeader
@@ -37,8 +50,8 @@ function PostCard() {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 2 de carne, 4 de choclo, 1 de carne, 2 de choclo, 9 de carne, 5 de choclo, 5 de choclo... y otra más de choclo
-        </Typography>
+        {tasks.title}
+          </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
