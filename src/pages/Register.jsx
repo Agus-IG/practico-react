@@ -6,9 +6,30 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-//import { estilos } from '../Styles';
+import { estilos } from '../Styles';
 
-export default function Register() {  
+
+import { useState } from 'react';
+import axios from 'axios';
+
+export default function Register() { 
+  const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [password2, setPassword2] = useState('');
+
+    const handleCreate = () => {
+      axios.post(`http://localhost:3000/api/register`, {
+          username,
+          email,
+          password
+      })
+          .then((res) => {
+                alert('Se envio')
+          })
+  }
+
+ 
   return (
     <div style={estilos.todo}>
       <div style={estilos.card}>
@@ -28,20 +49,20 @@ export default function Register() {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Nombre" variant="filled" />
+      <TextField id="outlined-basic" label="Nombre" onChange={(e) => setUsername(e.target.value)} variant="filled" />
       <br/>
-      <TextField id="filled-basic" label="E-mail" variant="filled" />
+      <TextField id="filled-basic" label="E-mail" onChange={(e) => setEmail(e.target.value)} variant="filled" />
       <br/>
-      <TextField id="standard-basic" type='password' label="Contraseña" variant="filled" />
+      <TextField id="standard-basic" type='password' onChange={(e) => setPassword(e.target.value)} label="Contraseña" variant="filled" />
       <br/>
-      <TextField id="standard-basic" type='password' label="Confirmar Contraseña" variant="filled" />
+      <TextField id="standard-basic" type='password' onChange={(e) => setPassword2(e.target.value)} label="Confirmar Contraseña" variant="filled" />
       
     </Box>
       </CardContent>
       <CardActions>
         <div style = {estilos.cont}>
-        <Button variant="secondary" style={estilos.boton2}>cancelar</Button>
-        <Button variant="contained" style={estilos.boton} >crear</Button>
+        <Button variant="secondary"  style={estilos.boton2}>cancelar</Button>
+        <Button variant="contained" onClick={handleCreate} style={estilos.boton} >crear</Button>
         </div>
       </CardActions>
     </Card>
@@ -51,47 +72,3 @@ export default function Register() {
 }
   
 
-
-const estilos = {
-  todo: {
-    backgroundColor:"#b3c67f",
-    width:"100%",
-    height: "100%",
-    padding: "1px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center"
-    
-  },
-  card:{
-    display: "flex",
-    textAlign: "center"
-  },
-    total: {
-      margin: "10px",
-      color: "black",
-      backgroundColor: "#f8f8d6",
-      height:"600px",
-      width:"500px"
-
-    },
-    titulos:{
-      color:"#5d7e62",
-      fontSize:"40px",
-      fontWight:"10px"
-    },
-    boton:{
-      backgroundColor: "#d4e2b6",
-      color:"#5d7e62",
-      margin: "2%"
-
-    },
-    boton2:{
-      outlineColor: "#d4e2b6",
-      color:"#5d7e62",
-    },
-    cont:{
-      width: "100%",
-      alignItems: "center",
-    }
-}   
