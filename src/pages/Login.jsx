@@ -9,8 +9,9 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 import ImageFiles from '../indeximg.jsx';
 import { estilos } from '../Styles.jsx';
 import { useState } from 'react';
-import axios from 'axios';
 
+import { useAuth } from '../context/AuthContext.jsx'
+import { useForm } from 'react-hook-form'
 
 
 
@@ -18,15 +19,20 @@ export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const handleLogin = () => {
-    axios.post(`http://localhost:3000/api/login`, {
-      email,
-      password
-    })
-      .then((res) => {
-        alert('Se inicio sesion correctamente')
-      })
-  }
+  const { 
+    handleLogin, 
+    formState: { errors }, 
+  } = useForm()
+  const {signin} = useAuth()
+  console.log(errors.username)
+
+
+  const onSubmit = handleLogin((email,
+    password) => {
+    signin(email, password)
+      
+  })
+
 
   return (
     <div style={estilos.todo}>
@@ -81,7 +87,7 @@ export default function Login() {
           </CardActionArea>
           <CardActions style={{ display: 'flex' }}>
             <div style={estilos.cont}>
-              <Button variant="contained" size="large" onClick={handleLogin} style={estilos.boton}>Login</Button>
+              <Button variant="contained" size="large" onSubmit={handleLogin} style={estilos.boton}>Login</Button>
             </div>
           </CardActions>
         </Card>
