@@ -10,13 +10,10 @@
 - Orozco Mariano
 - Tames Lorenzo
 
----
 
+
+## Diagrama de secuencia
 ```mermaid
-
----
-title: Diagrama de secuencia
----
 
 sequenceDiagram
 
@@ -37,12 +34,8 @@ note over u:Segun el usuario y el tipo (Estudiante, docente y administrador), <b
 ```
 
 ---
-
+## Diagrama de clases
 ```mermaid
-
----
-title: Diagrama de clases
----
 
 classDiagram
 
@@ -100,27 +93,10 @@ classDiagram
 
 ---
 
-```mermaid
-
----
-title: Diagrama de estado para Administrador
----
-
-stateDiagram
-
-state opciones <<choice>>
-[*] --> Sistema: en
-note left of [*]: Administrador
-
-Sistema --> opciones
-note left of opciones: Gestiona
-opciones --> Comunicación
-opciones --> Recursos
-opciones --> Información
-
-
-
-```
-
-
+## Diagrama de estados
 ![imagen](/src/assets/diagrama%20de%20estados.jpg)
+
+---
+
+## Diagrama de casos de uso
+![imagen](/src/assets/diagrama_de_casos.jpg)
