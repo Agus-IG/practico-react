@@ -24,7 +24,7 @@ export default function Login() {
       password
     })
       .then((res) => {
-        alert('Se logio')
+        alert('Se inicio sesion correctamente')
       })
   }
 

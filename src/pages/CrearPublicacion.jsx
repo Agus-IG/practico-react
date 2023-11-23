@@ -12,19 +12,19 @@ import { estilos } from '../Styles';
 import { useState } from 'react';
 import axios from 'axios';
 
-export default function Register() { 
-  const [username, setUsername] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+export default function NuevaPublicacion() { 
+  const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [date, setDate] = useState('');
 
     const handleCreate = () => {
-      axios.post(`http://localhost:3000/api/register`, {
-          username,
-          email,
-          password
+      axios.post(`http://localhost:3000/api/publicaciones`, {
+          title,
+          description,
+          date
       })
           .then((res) => {
-                alert('Se creo el nuevo usuario')
+                alert('Se creo la nueva publicacion')
           })
   }
 
@@ -38,7 +38,7 @@ export default function Register() {
       />
       <CardContent >
         <Typography gutterBottom variant="h5" component="div" style={estilos.titulos}>
-          Crea tu cuenta
+         Nueva Publicacion
         </Typography>
         <Box
       component="form"
@@ -48,11 +48,11 @@ export default function Register() {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Nombre" onChange={(e) => setUsername(e.target.value)} variant="filled" />
+      <TextField id="outlined-basic" label="Titulo" onChange={(e) => setTitle(e.target.value)} variant="filled" />
       <br/>
-      <TextField id="filled-basic" label="E-mail" onChange={(e) => setEmail(e.target.value)} variant="filled" />
+      <TextField id="filled-basic" label="Descripcion" onChange={(e) => setDescription(e.target.value)} variant="filled" />
       <br/>
-      <TextField id="standard-basic" type='password' onChange={(e) => setPassword(e.target.value)} label="Contraseña" variant="filled" />
+      <TextField id="standard-basic" type='date' onChange={(e) => setDate(e.target.value)} label="Fecha" variant="filled" />
       <br/>
       
     </Box>
@@ -69,4 +69,3 @@ export default function Register() {
   );
 }
   
-

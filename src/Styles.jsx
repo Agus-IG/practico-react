@@ -56,6 +56,9 @@ export const estilos = {
   dialogo: {
     backgroundColor: "#d4e2b6",
     color: "#5d7e62" 
+  },
+  barra:{
+justifyContent: "space-between"
   }
 }
 

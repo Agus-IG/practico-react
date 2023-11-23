@@ -17,14 +17,8 @@ import { useState } from 'react';
 
 
 function PostCard() {
-  const [APIData, setAPIData] = useState([]);
-  const getPosts = () => {
-    axios.get(`http://localhost:3000/api/tasks`)
-        .then((response) => {
-            setAPIData(response.data.tasks);
-            console.log(response.data.tasks)
-        })
-  }
+  
+  
   
     return (
     <Card sx={{ maxWidth: 1000, maxHeight: 1000, }}>
@@ -39,7 +33,6 @@ function PostCard() {
             <MoreVertIcon />
             </IconButton>
         }
-        title="Home"
         subheader="November 2nd, 2023"
         />
         <CardMedia
@@ -50,7 +43,6 @@ function PostCard() {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-        {tasks.title}
           </Typography>
       </CardContent>
       <CardActions disableSpacing>
