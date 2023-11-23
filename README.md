@@ -97,3 +97,30 @@ classDiagram
 
 
 ```
+
+---
+
+```mermaid
+
+---
+title: Diagrama de estado para Administrador
+---
+
+stateDiagram
+
+state opciones <<choice>>
+[*] --> Sistema: en
+note left of [*]: Administrador
+
+Sistema --> opciones
+note left of opciones: Gestiona
+opciones --> Comunicación
+opciones --> Recursos
+opciones --> Información
+
+
+
+```
+
+
+![imagen](/src/assets/diagrama%20de%20estados.jpg)
